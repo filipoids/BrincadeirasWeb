@@ -1,0 +1,60 @@
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <style type="text/css">
+            .container
+            {
+                position: relative;
+                width: 300px;
+                height: 500px;
+                margin: 0px auto;
+            }
+            .container .folder
+            {
+                width: 100%;
+                height: 100%;
+                box-shadow: 5px 5px 30px #000;
+                -webkit-transition: 1s;
+            }
+            .container:hover .folder
+            {
+                box-shadow: -5px 5px 30px #000;
+                -webkit-transform: rotateY(180deg);
+            }
+            .container .folder .face
+            {
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                backface-visibility: hidden;
+                -webkit-backface-visibility: hidden;
+            }
+            .container .folder .capa
+            {                
+                background: #f00;
+                backface-visibility: hidden;
+            }
+            .container .folder .verso
+            {
+                background: #0f0;
+                box-sizing: border-box;
+                display: block;
+                -webkit-transform: rotateY(180deg);
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="folder">
+                <img src="img/verso.jpg" class="capa face"/>
+                <img src="img/joker-card.jpg" class="verso face"/>
+            </div>
+        </div>
+    </body>
+</html>
